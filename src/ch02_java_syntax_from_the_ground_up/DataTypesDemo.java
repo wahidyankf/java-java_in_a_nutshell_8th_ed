@@ -35,29 +35,36 @@ public class DataTypesDemo {
 
     System.out.println("-----");
 
-    var object = new Account();
+    var obj = new AccountB();
 
-    if (object instanceof Account) {
+    if (obj instanceof AccountB) {
       System.out.println("object is an instance of Account");
-      object.printSomething();
+      obj.printSomething();
     } else {
       System.out.println("object is not an instance of Account");
 
       // still compiled
-      object.printSomething();
+      obj.printSomething();
     }
 
-    if (object instanceof Account a) {
+    if (obj instanceof AccountB a) {
       System.out.println("object is an instance of Account");
       a.printSomething();
     } else {
       System.out.println("object is not an instance of Account");
     }
 
+    enum Color {
+      RED, GREEN, BLUE
+    }
+
+    System.out.println(Color.BLUE);
+    System.out.println(Color.GREEN);
+
   }
 }
 
-class Account {
+class AccountB {
   void printSomething() {
     System.out.println("Account");
   }

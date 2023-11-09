@@ -12,7 +12,7 @@ public class ClassesAndObjectsDemo {
   public static void main(String[] args) {
     System.out.println("constructor demo");
 
-    Account a = new Account("John Doe", 100.0, 12345);
+    AccountA a = new AccountA("John Doe", 100.0, 12345);
 
     LocalDateTime d = LocalDateTime.now();
 
@@ -40,7 +40,7 @@ public class ClassesAndObjectsDemo {
 
     Class<?> typeInt = int.class;
     Class<?> typeIntArray = int[].class;
-    Class<?> typeAccount = Account.class;
+    Class<?> typeAccount = AccountA.class;
 
     System.out.println(typeInt);
     System.out.println(typeIntArray);
@@ -102,12 +102,12 @@ public class ClassesAndObjectsDemo {
 
 }
 
-class Account {
+class AccountA {
   public String name;
   public double balance;
   public int accountId;
 
-  public Account(String name, double openingBalance, int id) {
+  public AccountA(String name, double openingBalance, int id) {
     this.name = name;
     this.balance = openingBalance;
     this.accountId = id;
