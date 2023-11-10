@@ -19,9 +19,9 @@ public class SealedClassDemo {
 
   public static double calculateArea(Shape s) {
     return switch (s.getClass().getSimpleName()) {
-      case Circle c -> c.getArea();
-      case Rectangle r -> r.getArea();
-      case Triangle t -> t.getArea();
+      case "Circle" -> ((Circle) s).getArea();
+      case "Rectangle" -> ((Rectangle) s).getArea();
+      case "Triangle" -> ((Triangle) s).getArea();
       default -> throw new IllegalArgumentException("Unexpected value: " + s.getClass().getSimpleName());
     };
   }
