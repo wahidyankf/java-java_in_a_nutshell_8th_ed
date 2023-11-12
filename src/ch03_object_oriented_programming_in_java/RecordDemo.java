@@ -21,4 +21,15 @@ public class RecordDemo {
 }
 
 record Point(double x, double y) {
+  // to set default value
+  public Point(double x) {
+    this(x, 0.0);
+  }
+
+  // compact constructor provides validation
+  public Point {
+    if (Double.isNaN(x) || Double.isNaN(y)) {
+      throw new IllegalArgumentException("Illegal NaN");
+    }
+  }
 }
